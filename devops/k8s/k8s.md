@@ -27,7 +27,7 @@ Containerization is the packaging together of software code with all it’s nece
 
 ---
 
-# Famous Container run times
+# Some of the famous Container run times
 
 - [Docker](https://www.docker.com/) - de facto standard
 - [cri-o](https://cri-o.io/)
@@ -64,10 +64,12 @@ Container orchestration is the automation and management of the lifecycle of con
 
 ---
 
-# Famous Orchestration tools
+# Some of the famous Orchestration tools
 
 - [Kubernetes](https://kubernetes.io/) - de facto standard
 - [OpenShift](https://www.openshift.com/)
 - [Nomad](https://www.nomadproject.io/)
 - [Docker swarm](https://docs.docker.com/engine/swarm/)
 - [Apache Mesos](https://mesos.apache.org/)
+
+---
