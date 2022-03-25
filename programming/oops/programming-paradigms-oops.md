@@ -44,7 +44,7 @@ Inheritance allows one class to inherits the attributes and methods of another c
 
 Polymorphism - The word "poly" means many and "morphs" means forms. So polymorphism means many forms. Using inheritance, objects can override shared parent behaviors, with specific child behaviors. It is of two forms
 
-- Method Overriding (Rum time polymorphism)
+- Method Overriding (Run time polymorphism)
 - Method Overloading (Compile time polymorphism)
 
 ---
