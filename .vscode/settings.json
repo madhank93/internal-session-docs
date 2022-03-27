@@ -1,3 +1,13 @@
 {
-  "cSpell.words": ["Kubernetes", "marp", "Mesos"]
+  "cSpell.words": [
+    "apiserver",
+    "Containerd",
+    "kube",
+    "kubeadm",
+    "kubectl",
+    "kubelet",
+    "Kubernetes",
+    "marp",
+    "Mesos"
+  ]
 }

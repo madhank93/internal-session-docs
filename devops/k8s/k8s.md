@@ -12,11 +12,14 @@ theme: default
 # Agenda
 
 - Containerization
+  - Docker Architecture
+  - Main components of Docker
+  - Demo time !!!
 - Orchestration
-- Kubernetes Architecture
-- Kubernetes Objects
-- Code walk through
-- Demo time !!!
+  - Kubernetes Architecture
+  - Kubernetes Components
+  - Code walk through
+  - Demo time !!!
 
 ---
 
@@ -29,23 +32,6 @@ theme: default
 ---
 
 ![width:5000px height:18cm](https://cdn.ttgtmedia.com/rms/onlineImages/microservices-vm_versus_docker.jpg)
-
----
-
-# Docker architecture
-
-![](https://docs.docker.com/engine/images/architecture.svg)
-
----
-
-# Docker Components
-
-- **Client** - is the primary way to interact with Docker. When commands such as `docker run` executed the client sends these commands to dockerd (daemon), which carries them out.
-- **Daemon** - receives the commands from the client through CLI or REST API. It listens to requests and processes Docker commands related to images, containers, networks, and volumes.
-- **Dockerfile** - is a text document that contains all the commands to build an image.
-- **Image** - are read-only templates built from a set of instructions written in Dockerfile. Images contains application and its dependencies.
-- **Registries** - is a repository (storage) for Docker images.
-- **Containers** - is the instance of an image. We can create, run, stop, or delete a container using the Docker CLI.
 
 ---
 
@@ -70,6 +56,23 @@ theme: default
 
 ---
 
+# Docker architecture
+
+![](https://docs.docker.com/engine/images/architecture.svg)
+
+---
+
+# Docker Components
+
+- **Client** - is the primary way to interact with Docker. When commands such as `docker run` executed the client sends these commands to dockerd (daemon), which carries them out.
+- **Daemon** - receives the commands from the client through CLI or REST API. It listens to requests and processes Docker commands related to images, containers, networks, and volumes.
+- **Dockerfile** - is a text document that contains all the commands to build an image.
+- **Image** - are read-only templates built from a set of instructions written in Dockerfile. Images contains application and its dependencies.
+- **Registries** - is a repository (storage) for Docker images.
+- **Containers** - is the instance of an image. We can create, run, stop, or delete a container using the Docker CLI.
+
+---
+
 # Some of the famous Containerization technology
 
 - [Docker](https://www.docker.com/) - de facto standard
@@ -87,6 +90,35 @@ theme: default
 Container orchestration is the automation and management of the lifecycle of containers and services.
 
 It solves the problem by automating the scheduling, deployment, scalability, load balancing, availability, and networking of containers.
+
+---
+
+###### **K8s**
+
+###### **Architecture**
+
+![bg width:900](https://raw.githubusercontent.com/madhank93/learn-k8s/main/img/kube-arch-2.jpeg)
+
+---
+
+# Kubernetes components
+
+## Control plane / Master node
+
+- **kube-apiserver** - It's an entry point to interact with Kubernetes API (acts as a gateway). It determines if a request is valid and, if it is, processes it. It can be accessed through the kubectl cmd or kubeadm.
+- **kube-scheduler** - It considers the resource needs of a pod, such as CPU or memory, along with the health of the cluster. Then it schedules the pod to an appropriate compute node. Then it passes on the requests to kubelet to execute it.
+- **kube-controller-manager** - Detects state changes in the cluster (eg: if pod crashes, detects it and recovers the cluster state). Checks with scheduler and makes sure the correct number of pods is running.
+- **etcd** - It is a key-value store database, stores the cluster state. All of the cluster information (eg: new pod created, pod crashed) is stored in the etcd.
+
+---
+
+## Compute machine / Worker node
+
+- **kubelet** - Kubernetes agent running on nodes, a tiny application that communicates with the control plane & containers vice versa and when the control plane needs something to happen in a node, the kubelet executes the action. It ensures the containers are running in the pod by providing the health information to the control plane and carry out actions based on control plane.
+- **kube-proxy** - The kube-proxy handles network communications inside or outside of your cluster. It uses operating system’s packet filtering layer if there is one, otherwise , kube-proxy forwards the traffic itself.
+- **container runtime** - It is the software responsible for running containers. It can be Docker, Containerd and CRI-O.
+
+---
 
 ---
 
