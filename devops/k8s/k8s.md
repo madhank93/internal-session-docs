@@ -120,6 +120,12 @@ It solves the problem by automating the scheduling, deployment, scalability, loa
 
 ---
 
+# Kubernetes Objects
+
+- **Namespace** - which help in organizing resources and partition a single Kubernetes cluster into multiple virtual clusters. It provides a degree of isolation from the other parts of the cluster.
+- **Service** - is an abstract way to expose an application running on a set of Pods as a network service. It creates a permanent IP address, the lifecycle of pod and service are not connected. Even if the pods crash and are recreated, the service IP remains the same.
+- **Deployment** - describes the desired state of a pod or a replica set, then gradually updates the environment (for example, creating or deleting replicas) until the current state matches the desired state specified in the deployment file. In general, we don’t work directly with pods, we will create deployments. It is mainly for stateless apps.
+
 ---
 
 # Some of the famous Orchestration tools
@@ -131,3 +137,12 @@ It solves the problem by automating the scheduling, deployment, scalability, loa
 - [Apache Mesos](https://mesos.apache.org/)
 
 ---
+
+# Cloud build
+
+- it is a serverless CI/CD platform to build, test, and deploy.
+- vendor lock in
+
+---
+
+# Demo time !!!
