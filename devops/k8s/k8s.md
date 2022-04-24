@@ -146,3 +146,18 @@ It solves the problem by automating the scheduling, deployment, scalability, loa
 ---
 
 # Demo time !!!
+
+---
+
+### Architecture
+
+![bg contain](https://github.com/dockersamples/example-voting-app/raw/master/architecture.png)
+
+---
+
+# Resources
+
+- [Docker resource](https://github.com/madhank93/learn-docker)
+- [k8s resource](https://github.com/madhank93/learn-k8s)
+- [k8s - Voting example](https://github.com/dockersamples/example-voting-app)
+- [docker - nodejs app](https://github.com/madhank93/node-express-ts)
